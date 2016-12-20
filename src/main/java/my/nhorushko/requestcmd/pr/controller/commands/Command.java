@@ -8,6 +8,7 @@ import my.nhorushko.requestcmd.pr.view.View;
  */
 public abstract class Command {
     public static final String COMMAND_NAME_ADD_REQUEST = "add";
+    public static final String COMMAND_NAME_SHOW_REQUEST = "show";
     public static final String COMMAND_SEPARATOR = "\\|";
     protected String[] commandParams;
     protected View view;

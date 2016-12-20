@@ -13,6 +13,7 @@ public interface Storeable {
     void updateRequest(Request oldRequest, Request newRequest);
     void deleteRequest(String name);
     List<Request> receiveRequests();
+    Request receiveRequest(String name);
     List<Request> receiveRequestWith(String condition);
     void addComment(String name, String Comment);
 }

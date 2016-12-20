@@ -5,11 +5,9 @@ import my.nhorushko.requestcmd.pr.testutils.TestUtils;
 import my.nhorushko.requestcmd.pr.view.View;
 import org.junit.Before;
 import org.junit.Test;
-import org.mockito.ArgumentCaptor;
 
 import static org.junit.Assert.*;
 import static org.mockito.Mockito.mock;
-import static org.mockito.Mockito.verify;
 
 /**
  * Created by Nikol on 12/20/2016.
