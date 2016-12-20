@@ -1,4 +1,4 @@
-package my.nhorushko.requestcmd.view;
+package my.nhorushko.requestcmd.pr.view;
 
 import java.util.Scanner;
 
