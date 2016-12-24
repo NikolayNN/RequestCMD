@@ -1,8 +1,6 @@
 package my.nhorushko.requestcmd.pr.controller;
 
-import my.nhorushko.requestcmd.pr.controller.commands.AddRequest;
-import my.nhorushko.requestcmd.pr.controller.commands.Command;
-import my.nhorushko.requestcmd.pr.controller.commands.WrongCommand;
+import my.nhorushko.requestcmd.pr.controller.commands.*;
 import my.nhorushko.requestcmd.pr.model.store.Storeable;
 import my.nhorushko.requestcmd.pr.view.View;
 
@@ -15,7 +13,12 @@ public class CommandFactory {
 
     public CommandFactory(View view, Storeable store) {
         this.view = view;
-        availableCommand = new Command[]{new AddRequest(view, store)};
+        availableCommand = new Command[]{
+                new AddRequest(view, store),
+                new Exit(view),
+                new ShowRequest(view, store),
+                new ShowRequestList(view, store)
+        };
     }
 
 
