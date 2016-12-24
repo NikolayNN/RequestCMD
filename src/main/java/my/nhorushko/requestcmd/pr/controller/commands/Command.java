@@ -7,11 +7,11 @@ import my.nhorushko.requestcmd.pr.view.View;
  * Created by Nikol on 12/19/2016.
  */
 public abstract class Command {
-    public static final String COMMAND_NAME_ADD_REQUEST = "add";
-    public static final String COMMAND_NAME_SHOW_REQUEST = "show";
-    public static final String COMMAND_NAME_SHOW_REQUEST_LIST = "list";
+    public static final String COMMAND_ADD_REQUEST = "add";
+    public static final String COMMAND_SHOW_REQUEST = "show";
+    public static final String COMMAND_SHOW_REQUEST_LIST = "list";
+    public static final String COMMAND_EXIT = "exit";
     public static final String COMMAND_SEPARATOR = "\\|";
-    protected String[] commandParams;
     protected View view;
     protected Storeable store;
     protected String command;

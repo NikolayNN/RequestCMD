@@ -4,7 +4,6 @@ import my.nhorushko.requestcmd.pr.model.Request;
 import my.nhorushko.requestcmd.pr.model.store.Storeable;
 import my.nhorushko.requestcmd.pr.testutils.TestUtils;
 import my.nhorushko.requestcmd.pr.view.View;
-import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
@@ -30,7 +29,7 @@ public class ShowRequestTest {
     @Test
     public void execute() {
         String reqName = "name";
-        command.setup(Command.COMMAND_NAME_SHOW_REQUEST + Command.COMMAND_SEPARATOR + reqName);
+        command.setup(Command.COMMAND_SHOW_REQUEST + Command.COMMAND_SEPARATOR + reqName);
         when(store.receiveRequest(reqName)).thenReturn(new Request("name", "description", "12.12.2012"));
         command.execute();
         assertEquals("[Request{name='name', description='description', startDate=Wed Dec 12 04:00:00 MSK 2012, comments=[]}]", TestUtils.readConsoleView(view));

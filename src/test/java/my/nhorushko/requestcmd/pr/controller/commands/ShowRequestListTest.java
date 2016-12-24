@@ -31,7 +31,7 @@ public class ShowRequestListTest {
 
     @Test
     public void execute() throws Exception {
-        command.setup(Command.COMMAND_NAME_SHOW_REQUEST_LIST);
+        command.setup(Command.COMMAND_SHOW_REQUEST_LIST);
         List actual = new ArrayList();
         actual.add(new Request("name", "description", "12.12.2012"));
         actual.add(new Request("name2", "description2", "13.13.2013"));
