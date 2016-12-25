@@ -27,7 +27,12 @@ public class FilterFactoryTest {
         requests.add(new Request("name2", "description2", "2.02.2012"));
         requests.add(new Request("name3", "description3", "2.02.2012"));
         List<Request> actual = filterFactory.filter(requests, "nameEq(name)");
-        assertEquals("", actual.toString());
+        assertEquals("[====================\n" +
+                "name:name\n" +
+                "description:description\n" +
+                "date:2.2.112\n" +
+                "comments:\n" +
+                "]", actual.toString());
     }
 
     @Test
@@ -37,7 +42,17 @@ public class FilterFactoryTest {
         requests.add(new Request("name", "description2", "2.02.2012"));
         requests.add(new Request("name3", "blb", "2.02.2012"));
         List<Request> actual = filterFactory.filter(requests, "nameEq(name), descCon(desc)");
-        assertEquals("", actual.toString());
+        assertEquals("[====================\n" +
+                "name:name\n" +
+                "description:description\n" +
+                "date:2.2.112\n" +
+                "comments:\n" +
+                ", ====================\n" +
+                "name:name\n" +
+                "description:description2\n" +
+                "date:2.2.112\n" +
+                "comments:\n" +
+                "]", actual.toString());
     }
 
 }

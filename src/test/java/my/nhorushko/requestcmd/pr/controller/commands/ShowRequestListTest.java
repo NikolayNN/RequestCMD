@@ -37,7 +37,17 @@ public class ShowRequestListTest {
         actual.add(new Request("name2", "description2", "13.13.2013"));
         when(store.receiveRequests()).thenReturn(actual);
         command.execute();
-        assertEquals("[[Request{name='name', description='description', startDate=Wed Dec 12 04:00:00 MSK 2012, comments=[]}, Request{name='name2', description='description2', startDate=Mon Jan 13 04:00:00 MSK 2014, comments=[]}]]", TestUtils.readConsoleView(view));
+        assertEquals("[[====================\n" +
+                "name:name\n" +
+                "description:description\n" +
+                "date:12.12.112\n" +
+                "comments:\n" +
+                ", ====================\n" +
+                "name:name2\n" +
+                "description:description2\n" +
+                "date:13.1.114\n" +
+                "comments:\n" +
+                "]]", TestUtils.readConsoleView(view));
     }
 
 }
