@@ -19,7 +19,8 @@ public class CommandFactory {
                 new AddRequest(view, store),
                 new Exit(view),
                 new ShowRequest(view, store),
-                new ShowRequestList(view, store)
+                new ShowRequestList(view, store),
+                new ShowFilteredRequestList(view, store)
         };
     }
 

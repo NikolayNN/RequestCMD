@@ -69,6 +69,6 @@ public class Request implements Serializable {
                 ", description='" + description + '\'' +
                 ", startDate=" + startDate +
                 ", comments=" + comments +
-                '}';
+                '}'; //todo more beatyful
     }
 }

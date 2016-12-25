@@ -8,8 +8,8 @@ import java.util.List;
  * Created by Nikol on 12/18/2016.
  */
 public abstract class Filter {
-    public abstract List<Request> doFilter();
-    public List<Request> doWork(){
+    protected abstract List<Request> doFilter();
+    public List<Request> getFilteredList(){
         return doFilter();
     }
 }
