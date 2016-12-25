@@ -30,6 +30,7 @@ public class AddComment extends Command {
 
     @Override
     public void execute() {
+        checkCountParameters(EXPECTED_COUNT_PARAMETERS);
         store.addComment(parameters[0], parameters[1]);
     }
 }
