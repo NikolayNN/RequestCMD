@@ -43,6 +43,7 @@ public class UpdateRequest extends Command {
         Request requestForUpdate = store.receiveRequest(requestNameForUpdate);
         updateRequest(conditions, requestForUpdate);
         store.updateRequest(requestNameForUpdate, requestForUpdate);
+        view.write("request updated");
     }
 
     private void updateRequest(String conditions, Request updatedRequest) {
