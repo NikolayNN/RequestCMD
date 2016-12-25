@@ -70,14 +70,22 @@ public class Request implements Serializable {
         this.description = description;
     }
 
-
     @Override
     public String toString() {
-        return "Request{" +
-                "name='" + name + '\'' +
-                ", description='" + description + '\'' +
-                ", startDate=" + startDate +
-                ", comments=" + comments +
-                '}'; //todo more beatyful
+        StringBuilder result = new StringBuilder();
+        result.append("====================").append("\n");
+        result.append("name:").append(name).append("\n");
+        result.append("description:").append(description).append("\n");
+        result.append("date:").append(startDate.getDate()).append(".").append(startDate.getMonth() + 1).append(".").append(startDate.getYear()).append("\n");
+        result.append("comments:").append("\n").append(commentsToString());
+        return result.toString();
+    }
+
+    private String commentsToString() {
+        StringBuilder result = new StringBuilder();
+        for (String comment : comments) {
+            result.append(comment);
+        }
+        return result.toString();
     }
 }
