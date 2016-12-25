@@ -15,13 +15,13 @@ public class CommandFactory {
         this.view = view;
         availableCommands = new Command[]{
                 new AddRequest(view, store),
-                new Exit(view),
                 new ShowRequest(view, store),
                 new ShowRequestList(view, store),
                 new ShowFilteredRequestList(view, store),
                 new UpdateRequest(view, store),
+                new AddComment(view, store),
                 new Help(view, store),
-                new AddComment(view, store)
+                new Exit(view)
         };
     }
 
