@@ -16,7 +16,7 @@ public class AddRequest extends Command {
             + NAME + COMMAND_SEPARATOR_TO_STRING
             + "requestName" + COMMAND_SEPARATOR_TO_STRING
             + "requestDescription" + COMMAND_SEPARATOR_TO_STRING
-            + "29.12.2012" +  "'";
+            + "29.12.2012" + "'";
     private final int EXPECTED_COUNT_PARAMETERS = 3;
 
     public AddRequest(View view, Storeable store) {

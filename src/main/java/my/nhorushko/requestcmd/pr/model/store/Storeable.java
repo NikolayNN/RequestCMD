@@ -1,7 +1,6 @@
 package my.nhorushko.requestcmd.pr.model.store;
 
 import my.nhorushko.requestcmd.pr.model.Request;
-import my.nhorushko.requestcmd.pr.model.requestfilters.RequestFilter;
 
 import java.util.List;
 

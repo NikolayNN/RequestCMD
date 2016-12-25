@@ -5,7 +5,7 @@ import my.nhorushko.requestcmd.pr.view.View;
 /**
  * Created by Nikol on 12/19/2016.
  */
-public class WrongCommand extends Command{
+public class WrongCommand extends Command {
 
     public WrongCommand(View view) {
         super(view);

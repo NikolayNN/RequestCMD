@@ -32,18 +32,19 @@ public abstract class Command {
     }
 
     public abstract String getName();
+
     public abstract String getDescription();
 
     public abstract void execute();
 
-    protected void checkCountParameters(int expectedCount){
-        if(expectedCount != parameters.length){
+    protected void checkCountParameters(int expectedCount) {
+        if (expectedCount != parameters.length) {
             throw new RuntimeException("ERROR. Invalid count parameters expect '" + expectedCount
                     + "', but actual '" + parameters.length + "'");
         }
     }
 
-    private void getCommandParams(String source){
+    private void getCommandParams(String source) {
         String[] splitedInput = source.split(COMMAND_SEPARATOR);
         parameters = new String[splitedInput.length - 1];
         if (splitedInput.length > 1) {

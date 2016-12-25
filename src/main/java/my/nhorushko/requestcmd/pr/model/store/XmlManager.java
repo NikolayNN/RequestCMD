@@ -1,7 +1,7 @@
 package my.nhorushko.requestcmd.pr.model.store;
 
 import my.nhorushko.requestcmd.pr.model.Request;
-import my.nhorushko.requestcmd.pr.model.requestfilters.RequestFilter;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,11 +32,11 @@ public class XmlManager implements Storeable {
 
     private Request findRequestByName(String name) {
         for (Request request : requests) {
-            if(request.getName().equalsIgnoreCase(name)){
+            if (request.getName().equalsIgnoreCase(name)) {
                 return request;
             }
         }
-        throw  new  RuntimeException("ERROR. Request with name '" + name + "'" + " can't found");
+        throw new RuntimeException("ERROR. Request with name '" + name + "'" + " can't found");
     }
 
     public void deleteRequest(String name) {

@@ -7,7 +7,7 @@ import my.nhorushko.requestcmd.pr.view.View;
 /**
  * Created by Nikol on 12/25/2016.
  */
-public class Help extends Command{
+public class Help extends Command {
     private final String NAME = COMMAND_HELP;
     private final int EXPECTED_COUNT_PARAMETERS = 0;
 

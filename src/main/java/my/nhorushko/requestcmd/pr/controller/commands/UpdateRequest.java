@@ -49,13 +49,13 @@ public class UpdateRequest extends Command {
         String[] parseString = conditions.split(",");
         for (String s : parseString) {
             String condition = s.substring(s.indexOf(OPEN_CONDITION) + 1, s.indexOf(CLOSE_CONDITION));
-            if(condition.equals(NEW_NAME)){
+            if (condition.equals(NEW_NAME)) {
                 updatedRequest.setName(condition);
             }
-            if(condition.equals(NEW_DESCRIPTION)){
+            if (condition.equals(NEW_DESCRIPTION)) {
                 updatedRequest.setDescription(condition);
             }
-            if(condition.equals(NEW_DATE)){
+            if (condition.equals(NEW_DATE)) {
                 updatedRequest.setStartDate(condition);
             }
         }
