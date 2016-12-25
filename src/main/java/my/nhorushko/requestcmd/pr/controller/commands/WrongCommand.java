@@ -13,7 +13,12 @@ public class WrongCommand extends Command{
 
     @Override
     public String getName() {
-        throw new UnsupportedOperationException();
+        return "";
+    }
+
+    @Override
+    public String getDescription() {
+        return "";
     }
 
     @Override
