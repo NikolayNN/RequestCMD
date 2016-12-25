@@ -20,7 +20,9 @@ public class CommandFactory {
                 new Exit(view),
                 new ShowRequest(view, store),
                 new ShowRequestList(view, store),
-                new ShowFilteredRequestList(view, store)
+                new ShowFilteredRequestList(view, store),
+                new UpdateRequest(view, store),
+                new AddComment(view, store)
         };
     }
 

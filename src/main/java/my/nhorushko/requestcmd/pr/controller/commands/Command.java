@@ -13,6 +13,7 @@ public abstract class Command {
     public static final String COMMAND_SHOW_FILTERED_REQUEST_LIST = "listWhere";
     public static final String COMMAND_EXIT = "exit";
     public static final String COMMAND_ADD_COMMENT = "addComment";
+    public static final String COMMAND_UPDATE_REQUEST = "update";
     public static final String COMMAND_SEPARATOR_TO_STRING = "|";
     public static final String COMMAND_SEPARATOR = "\\|";
     protected View view;

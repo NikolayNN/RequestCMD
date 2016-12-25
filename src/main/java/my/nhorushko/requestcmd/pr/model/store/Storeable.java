@@ -10,7 +10,7 @@ import java.util.List;
  */
 public interface Storeable {
     void addRequest(Request request);
-    void updateRequest(Request oldRequest, Request newRequest);
+    void updateRequest(String requestNameForUpdate, Request newRequest);
     void deleteRequest(String name);
     List<Request> receiveRequests();
     Request receiveRequest(String name);

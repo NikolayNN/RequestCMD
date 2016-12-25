@@ -23,9 +23,9 @@ public class XmlManager implements Storeable {
         xmlFile.writeXMLFile(requests);
     }
 
-    public void updateRequest(Request oldRequest, Request newRequest) {
+    public void updateRequest(String requestNameForUpdate, Request newRequest) {
         requests = xmlFile.readXMLFile();
-        deleteRequest(oldRequest.getName());
+        deleteRequest(requestNameForUpdate);
         addRequest(newRequest);
         xmlFile.writeXMLFile(requests);
     }

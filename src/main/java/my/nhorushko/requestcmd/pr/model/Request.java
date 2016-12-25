@@ -31,7 +31,7 @@ public class Request implements Serializable {
         comments = new ArrayList<>();
     }
 
-    private void setStartDate(String source){
+    public void setStartDate(String source){
         SimpleDateFormat parse = new SimpleDateFormat("dd.MM.yyyy");
         try {
             parse.setTimeZone(TimeZone.getTimeZone("GMT"));
@@ -61,6 +61,15 @@ public class Request implements Serializable {
     public void addComment(String comment){
         comments.add(comment);
     }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
 
     @Override
     public String toString() {
