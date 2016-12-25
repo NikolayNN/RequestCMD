@@ -20,8 +20,7 @@ public class Controller {
 
         while (true) {
             try {
-                view.write(commandFactory.printAvailableCommands());
-                view.write("Input your command...");
+                view.write("Input your command or 'help'...");
                 String input = view.read();
                 Command command = commandFactory.createCommand(input);
                 command.execute();
