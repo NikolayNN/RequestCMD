@@ -8,7 +8,7 @@ import my.nhorushko.requestcmd.pr.view.View;
  */
 public class Exit extends Command {
     private final String NAME = COMMAND_EXIT;
-    private String DESCRIPTION = "Close programm. Example: '"
+    private String DESCRIPTION = "Close programm." + "\n\t" + "Example: '"
             + NAME + "'";
     private final int EXPECTED_COUNT_PARAMETERS = 0;
 

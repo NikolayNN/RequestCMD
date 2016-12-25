@@ -8,7 +8,7 @@ import my.nhorushko.requestcmd.pr.view.View;
  */
 public class AddComment extends Command {
     private String NAME = COMMAND_ADD_COMMENT;
-    private String DESCRIPTION = "Add comment to request. Example: '"
+    private String DESCRIPTION = "Add comment to request." + "\n\t" + "Example: '"
             + NAME + COMMAND_SEPARATOR
             + "requestName" + COMMAND_SEPARATOR_TO_STRING
             + "comment" + COMMAND_SEPARATOR_TO_STRING + "'";

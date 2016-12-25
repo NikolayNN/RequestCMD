@@ -8,7 +8,7 @@ import my.nhorushko.requestcmd.pr.view.View;
  */
 public class ShowRequestList extends Command {
     private final String NAME = COMMAND_SHOW_REQUEST_LIST;
-    private String DESCRIPTION = "Show all requests. Example: '" + NAME + "'";
+    private String DESCRIPTION = "Show all requests." + "\n\t" + "Example: '" + NAME + "'";
     private final int EXPECTED_COUNT_PARAMETERS = 0;
 
     public ShowRequestList(View view, Storeable store) {

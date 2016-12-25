@@ -16,7 +16,7 @@ public class UpdateRequest extends Command {
     private final String NAME = COMMAND_UPDATE_REQUEST;
     private final int EXPECTED_COUNT_PARAMETERS = 2;
 
-    private String DESCRIPTION = "Update request 'newName', 'newDesc', 'newDate'. Example: '"
+    private String DESCRIPTION = "Update request 'newName', 'newDesc', 'newDate'." + "\n\t" + "Example: '"
             + NAME + COMMAND_SEPARATOR_TO_STRING
             + "requestNameForUpdate" + COMMAND_SEPARATOR_TO_STRING
             + "newName(newName), newDesc(newDesc), newDate(12.12.2012)" + "'";

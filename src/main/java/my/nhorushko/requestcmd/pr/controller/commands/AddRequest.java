@@ -12,7 +12,7 @@ import static org.mockito.Mockito.verify;
  */
 public class AddRequest extends Command {
     private String NAME = COMMAND_ADD_REQUEST;
-    private String DESCRIPTION = "Add request. Example: '"
+    private String DESCRIPTION = "Add request." + "\n\t" + "Example: '"
             + NAME + COMMAND_SEPARATOR_TO_STRING
             + "requestName" + COMMAND_SEPARATOR_TO_STRING
             + "requestDescription" + COMMAND_SEPARATOR_TO_STRING

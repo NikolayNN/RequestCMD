@@ -75,7 +75,7 @@ public class XmlManagerTest {
         expected.add(testRequest2);
         expected.add(testUpdateRequest);
         //when
-        manager.updateRequest(testRequest1, testUpdateRequest);
+        manager.updateRequest(testRequest1.getName(), testUpdateRequest);
         //then
         assertEquals(expected, manager.receiveRequests());
     }

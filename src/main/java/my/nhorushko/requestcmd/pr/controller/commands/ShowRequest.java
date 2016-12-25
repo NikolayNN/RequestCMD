@@ -9,7 +9,7 @@ import my.nhorushko.requestcmd.pr.view.View;
 public class ShowRequest extends Command {
     private final String NAME = COMMAND_SHOW_REQUEST;
     private final int EXPECTED_COUNT_PARAMETERS = 1;
-    private String DESCRIPTION = "Show request by name. Example: '"
+    private String DESCRIPTION = "Show request by name." + "\n\t" + "Example: '"
             + NAME + COMMAND_SEPARATOR_TO_STRING
             + "requestName" + "'";
 
