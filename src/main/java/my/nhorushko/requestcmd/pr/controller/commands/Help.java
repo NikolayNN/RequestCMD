@@ -28,6 +28,7 @@ public class Help extends Command {
 
     @Override
     public void execute() {
+        checkCountParameters(EXPECTED_COUNT_PARAMETERS);
         view.write(new CommandFactory(view, store).printAvailableCommands());
     }
 }
