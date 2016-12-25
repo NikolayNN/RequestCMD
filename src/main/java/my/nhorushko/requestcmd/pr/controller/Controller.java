@@ -17,7 +17,6 @@ public class Controller {
         Storeable store = new XmlManager(new XMLFile("requestStore.xml"));
         CommandFactory commandFactory = new CommandFactory(view, store);
         view.write("Hello!");
-
         while (true) {
             try {
                 view.write("Input your command or 'help'...");
