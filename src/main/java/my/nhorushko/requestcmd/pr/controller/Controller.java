@@ -25,7 +25,7 @@ public class Controller {
                 command.execute();
             } catch (ExitException e) {
                 System.exit(1);
-            } catch (RuntimeException e) {
+            } catch (Exception e) {
                 view.write(e.getMessage());
             }
 

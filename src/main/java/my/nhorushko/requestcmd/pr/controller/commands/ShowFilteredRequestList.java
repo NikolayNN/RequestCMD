@@ -10,8 +10,8 @@ import my.nhorushko.requestcmd.pr.view.View;
 public class ShowFilteredRequestList extends Command{
     private final String NAME = COMMAND_SHOW_FILTERED_REQUEST_LIST;
     private final int EXPECTED_COUNT_PARAMETERS = 1;
-    private String DESCRIPTION = "Show request with filter 'nameEq', 'nameCon', 'descEq', 'descCon'." + "\n\t" + "Example: '"
-            + NAME + COMMAND_SEPARATOR_TO_STRING + "nameEq(name), descCon(desc)";
+    private String DESCRIPTION = "Show request with filter 'nameEq', 'nameCon', 'descEq', 'descCon', 'date>', 'date<', 'date='." + "\n\t" + "Example: '"
+            + NAME + COMMAND_SEPARATOR_TO_STRING + "nameEq(name), descCon(desc), date>(10.10.1990)";
 
     public ShowFilteredRequestList(View view, Storeable store) {
         super(view, store);
@@ -31,6 +31,6 @@ public class ShowFilteredRequestList extends Command{
     public void execute() {
         checkCountParameters(EXPECTED_COUNT_PARAMETERS);
         FilterFactory filterFactory = new FilterFactory();
-        filterFactory.filter(store.receiveRequests(), parameters[0]);
+        view.write(filterFactory.filter(store.receiveRequests(), parameters[0]).toString());
     }
 }
