@@ -12,6 +12,9 @@ public class FilterFactory {
     private final String NAME_CONSIST = "nameCon";
     private final String DESCRIPTION_EQUALS = "descEq";
     private final String DESCRIPTION_CONSIST = "descCON";
+    private final String DATE_MORE_THAN = "date>";
+    private final String DATE_LESS_THAN = "date<";
+    private final String DATE_EQUALS = "date=";
     private final String OPEN_CONDITION = "(";
     private final String CLOSE_CONDITION = ")";
 
@@ -31,6 +34,15 @@ public class FilterFactory {
             }
             if (s.contains(DESCRIPTION_CONSIST)) {
                 filter = new FilterByDescriptionConsist(filter, condition);
+            }
+            if (s.contains(DATE_MORE_THAN)) {
+                filter = new FilterByDateMoreThan(filter, condition);
+            }
+            if (s.contains(DATE_LESS_THAN)) {
+                filter = new FilterByDateLessThan(filter, condition);
+            }
+            if (s.contains(DATE_EQUALS)) {
+                filter = new FilterByDateEquals(filter, condition);
             }
         }
         return filter.getFilteredList();
