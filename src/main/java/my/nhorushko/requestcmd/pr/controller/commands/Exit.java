@@ -8,6 +8,8 @@ import my.nhorushko.requestcmd.pr.view.View;
  */
 public class Exit extends Command {
     private final String NAME = COMMAND_EXIT;
+    private String DESCRIPTION = "Close programm. Example: '"
+            + NAME + "'";
     private final int EXPECTED_COUNT_PARAMETERS = 0;
 
     public Exit(View view) {
@@ -17,6 +19,11 @@ public class Exit extends Command {
     @Override
     public String getName() {
         return NAME;
+    }
+
+    @Override
+    public String getDescription() {
+        return DESCRIPTION;
     }
 
     @Override

@@ -11,6 +11,7 @@ public abstract class Command {
     public static final String COMMAND_SHOW_REQUEST = "show";
     public static final String COMMAND_SHOW_REQUEST_LIST = "list";
     public static final String COMMAND_EXIT = "exit";
+    public static final String COMMAND_SEPARATOR_TO_STRING = "|";
     public static final String COMMAND_SEPARATOR = "\\|";
     protected View view;
     protected Storeable store;
@@ -27,6 +28,7 @@ public abstract class Command {
     }
 
     public abstract String getName();
+    public abstract String getDescription();
 
     public abstract void execute();
 

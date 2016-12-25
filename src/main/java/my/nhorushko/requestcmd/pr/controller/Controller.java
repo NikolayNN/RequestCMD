@@ -1,6 +1,5 @@
 package my.nhorushko.requestcmd.pr.controller;
 
-import my.nhorushko.requestcmd.pr.controller.CommandFactory;
 import my.nhorushko.requestcmd.pr.controller.commands.Command;
 import my.nhorushko.requestcmd.pr.controller.exceptions.ExitException;
 import my.nhorushko.requestcmd.pr.model.store.Storeable;
@@ -18,8 +17,10 @@ public class Controller {
         Storeable store = new XmlManager(new XMLFile("requestStore.xml"));
         CommandFactory commandFactory = new CommandFactory(view, store);
         view.write("Hello!");
+
         while (true) {
             try {
+                view.write(commandFactory.printAvailableCommands());
                 view.write("Input your command...");
                 String input = view.read();
                 Command command = commandFactory.createCommand(input);
