@@ -10,8 +10,8 @@ import my.nhorushko.requestcmd.pr.view.View;
 public class ShowFilteredRequestList extends Command{
     private final String NAME = COMMAND_SHOW_FILTERED_REQUEST_LIST;
     private final int EXPECTED_COUNT_PARAMETERS = 1;
-    private String DESCRIPTION = "Show request by name. Example: '"
-            + NAME + COMMAND_SEPARATOR_TO_STRING
+    private String DESCRIPTION = "Show request with filter 'nameEq', 'nameCon', 'descEq', 'descCon'. Example: '"
+            + NAME + COMMAND_SEPARATOR_TO_STRING + "nameEq(name), descCon(desc)"
             + "requestName" + "'";
 
     public ShowFilteredRequestList(View view, Storeable store) {
