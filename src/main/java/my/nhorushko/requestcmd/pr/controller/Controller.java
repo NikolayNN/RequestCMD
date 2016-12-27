@@ -24,7 +24,7 @@ public class Controller {
                 Command command = commandFactory.createCommand(input);
                 command.execute();
             } catch (ExitException e) {
-                System.exit(1);
+                break;
             } catch (Exception e) {
                 view.write(e.getMessage());
             }
